@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import Store from '../../store';
+
 
 const Modal = ({store}) => {
     const result = store.myModal();
@@ -26,7 +26,7 @@ const Modal = ({store}) => {
                     </div>
                     <div className="Item__quantity">{item.quantity + " "+"шт"}</div>
                     <div className='Item__actions'>
-                        <button onClick={(e) => store.addProduct(e)} data-title={item.title} data-price={item.price}>
+                        <button onClick={(e) => store.eraseProduct(e)} data-title={item.title} data-price={item.price}>
                         Удалить
                         </button>
                     </div>

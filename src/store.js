@@ -48,16 +48,6 @@ class Store {
     }
   }
 
-  /**
-   * Создание записи
-   */
-  // createItem({code, title = 'Новая запись', selected = false}) {
-  //   this.setState({
-  //     ...this.state,
-  //     items: this.state.items.concat({code, title, selected})
-  //   });
-  // }
-
 
   setSum(sum) {
     this.setState({
@@ -100,9 +90,21 @@ class Store {
   }
 
   /**
-   * Добавляю выбранный продукт в корзину, а также открываю и закрываю модальное окно
+   * 
    * @param code
    */
+
+/* Модуль удаления товара из корзины */
+  eraseProduct(e) {
+      let title = e.target.getAttribute("data-title")
+        this.setState({
+          ...this.state,
+          basket: this.state.basket.filter(item => item.title !== title)
+        })
+      
+  }
+
+  // Добавляю выбранный продукт в корзину, а также открываю и закрываю модальное окно
   addProduct(e) {
 
     try {
@@ -112,46 +114,12 @@ class Store {
       const price = Number(product.getAttribute('data-price'));
       const intermediateBasket = this.state.basket;
 
-      /* Модуль удаления товара из корзины */
-      if(product.textContent === "Удалить") {
-        this.setState({
-          ...this.state,
-          basket: this.state.basket.filter(item => item.title !== title)
-        })
-      }
-
       /* Все кидаю в корзину */
         this.setState({
             ...this.state,
             basket: this.state.basket.concat({code, title, price})
           })
-      
-
-      /* Модуль проверки наличия в корзине выбранного товара */
-      // if(intermediateBasket.length === 0) {
-      //   const quantity = 1;
-      //   this.setState({
-      //       ...this.state,
-      //       basket: this.state.basket.concat({code, title, price, quantity})
-      //     })
-      //     this.quantityAndPrice()
-      // } else if (intermediateBasket.findIndex(item=>item.title === title) === -1) {
-      //   const quantity = 1;
-      //   this.setState({
-      //     ...this.state,
-      //     basket: this.state.basket.concat({code, title, price, quantity})
-      //   })
-      //   this.quantityAndPrice()
-      // } else {
-      //   const index = intermediateBasket.findIndex(item=>item.title === title)
-      //   this.quantityAndPrice(index)
-      //   this.setState({
-      //     ...this.state,
-      //     basket: [...this.state.basket[index].quantity++]
-      //   })
-      //   this.quantityAndPrice()
-      // }
-  
+ 
       
     } catch (error) {
     /* Модуль открытия или закрытия модального окна корзины */  
@@ -171,22 +139,6 @@ class Store {
   }
 
 
-
-  /**
-   * Выделение записи по её коду
-   * @param code
-   */
-  // selectItem(code) {
-  //   this.setState({
-  //     ...this.state,
-  //     items: this.state.items.map(item => {
-  //       if (item.code === code){
-  //         item.selected = !item.selected;
-  //       }
-  //       return item;
-  //     })
-  //   });
-  // }
 }
 
 export default Store;
