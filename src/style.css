@@ -3,6 +3,7 @@ body{
     padding: 0;
     background: #535353;
     font-family: sans-serif;
+    position: relative;
 }
 /* Страница*/
 .App{
@@ -27,6 +28,30 @@ body{
     display: flex;
     justify-content: flex-end;
     padding: 20px;
+    align-items: center;
+    height: 20px;
+}
+.Controls__text {
+    margin-right: 10px;
+    align-items: center;
+}
+.Controls__button {
+    margin-left: 10px;
+    width: 75px;
+    height: 21px;
+}
+
+.Controls__info {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.Controls__infoBlock {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.Controls__ruble {
+    font-weight: bold;  
 }
 
 /*Список*/
@@ -46,6 +71,7 @@ body{
     display: flex;
     justify-content: flex-start;
     transition: background-color 1s;
+    height: 61px;
 }
 .Item_selected{
     background: #75aaf1;
@@ -63,6 +89,21 @@ body{
 }
 .Item__number{
     padding: 20px 10px 20px 20px;
+}
+
+.Item__count {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.Item__price {
+    align-items: center;
+    padding-right: 10px;
+    width: 100px;
+    text-align: right;
+}
+.Item__ruble {
+    align-items: center;
 }
 
 

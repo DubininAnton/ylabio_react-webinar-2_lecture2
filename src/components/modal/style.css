@@ -1,0 +1,66 @@
+.Modal {
+    position: absolute;
+    width: 960px;
+    min-height: 600px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color:#F5F5F5;
+    border-bottom: 1px solid black;
+    margin-bottom: 74px;
+}
+
+.Modal__header.Modal__header_title {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+}
+
+.Modal__header.Modal__header_btn {
+    width: 76px;
+    height: 21px;
+    border: 2px solid #767676;
+    padding: 1px 11px;
+    border-radius: 2px;
+    margin-right: 28px;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0px 32px 0 0;
+
+}
+.Item__quantity {
+    margin-left: 30px;
+    text-align: center;
+    padding: 20px;
+    min-width: 40px;
+}
+.Modal__total {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 110px;
+}
+.Modal__totalWord {
+    font-weight: bold;
+    margin-right: 50px;
+}
+.Modal__sum {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.Modal__ruble {
+    font-weight: bold;
+    margin-right: 5px;
+}

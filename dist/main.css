@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #535353;
+    font-family: sans-serif;
+    position: relative;
+}
+/* Страница*/
+.App{
+    max-width: 1024px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 5px #0000003b;
+}
+.App__head{
+    height: 80px;
+    background: #f5f5f5;
+}
+.App__head h1{
+    margin: 0;
+    padding: 20px 20px 10px;
+}
+
+/* Контрол с общими действиями */
+.Controls{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    align-items: center;
+    height: 20px;
+}
+.Controls__text {
+    margin-right: 10px;
+    align-items: center;
+}
+.Controls__button {
+    margin-left: 10px;
+    width: 75px;
+    height: 21px;
+}
+
+.Controls__info {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.Controls__infoBlock {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.Controls__ruble {
+    font-weight: bold;  
+}
+
+/*Список*/
+.List{
+
+}
+.List__item{
+    border-bottom: 1px dashed #ccc;
+}
+
+.List__item:first-child{
+    border-top: 1px dashed #ccc;
+}
+
+/* Пункт списка */
+.Item{
+    display: flex;
+    justify-content: flex-start;
+    transition: background-color 1s;
+    height: 61px;
+}
+.Item_selected{
+    background: #75aaf1;
+}
+
+
+.Item__title{
+    width: 100%;
+    padding: 20px 10px;
+}
+.Item__actions{
+    padding: 20px  20px 20px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.Item__number{
+    padding: 20px 10px 20px 20px;
+}
+
+.Item__count {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.Item__price {
+    align-items: center;
+    padding-right: 10px;
+    width: 100px;
+    text-align: right;
+}
+.Item__ruble {
+    align-items: center;
+}
+
+
+
+
+.Modal {
+    position: absolute;
+    width: 960px;
+    min-height: 600px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color:#F5F5F5;
+    border-bottom: 1px solid black;
+    margin-bottom: 74px;
+}
+
+.Modal__header.Modal__header_title {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+}
+
+.Modal__header.Modal__header_btn {
+    width: 76px;
+    height: 21px;
+    border: 2px solid #767676;
+    padding: 1px 11px;
+    border-radius: 2px;
+    margin-right: 28px;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0px 32px 0 0;
+
+}
